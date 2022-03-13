@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -15,7 +15,12 @@ const Person = (props) => {
 const App = () => {
 const dev = "devendra";
 const isnameShowing = true;
+// 3 Basic hooks in react are: useState, useEffect, useContext
 const [counter, setCounter] = useState(0);
+
+useEffect(() => {
+  setCounter(100);
+}, [])
 
   return (
     <div className="App">
